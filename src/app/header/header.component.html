@@ -1,0 +1,27 @@
+<header>
+    <img src="assets/amazon-com.svg" alt="amazon-logo" width="170px" />
+    <div style="display: flex; flex-direction: row;">
+        <img src="assets/location.png" width="24px" height="24px" />
+        <span>Deliver to Haridas <b>Baruipur 743376</b></span>
+    </div>
+
+    <div class="searchbar">
+        <select>
+            @for (item of orderType; track $index) {
+            <option value="{{item}}">{{item}}</option>
+            }
+        </select>
+        <input placeholder="Search Amazon.com" />
+
+        <div class="search-icon-box">
+            <img src="assets/magnifying-glass-solid.svg" width="18px">
+        </div>
+    </div>
+    <span>Hello, Rabi <b>Account & Lists</b></span>
+    <span>Return <b>& Orders</b></span>
+    <div style="position: relative;">
+        <img src="assets/cart.png" width="48px" height="48px" />
+        <div class="cart-number">0</div>
+    </div>
+
+</header>
