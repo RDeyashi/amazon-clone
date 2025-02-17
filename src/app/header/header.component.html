@@ -33,7 +33,7 @@
             All
         </div>
         @for (item of subHeaderOption; track $index) {
-            <span class="span-list">{{item}}</span>
+            <span class="span-list" (click)="onClickOption(item)">{{item}}</span>
         }
     </section>
 

@@ -3,13 +3,16 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 module.exports = withModuleFederationPlugin({
 
   name: 'mobiles',
-
+  filename: 'remoteEntryMobile.js',
   exposes: {
-    './Component': './projects/mobiles/src/app/app.component.ts',
+    './HomeComponent': './projects/mobiles/src/app/home/home.component.ts',
   },
 
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    // ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    "@angular/core": { singleton: true, strictVersion: true },
+    "@angular/common": { singleton: true, strictVersion: true },
+    "@angular/router": { singleton: true, strictVersion: true }
   },
 
 });

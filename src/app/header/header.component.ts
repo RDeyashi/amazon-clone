@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  public orderType:string[] = ["All Categories", "Amazon Fresh", "Alexa Skills", "Amazon Devices", "Amazon Freshers"]
-  public subHeaderOption: string[] = ["Fresh", "Mobiles", "Gift Cards", "Sell", "Gift Ideas", "MX Player", "Toys & Games", "Audible", "Grocery & Gourmet Foods", "Today's Deal", 
+  constructor(
+    private route: Router
+  ){}
+  public orderType: string[] = ["All Categories", "Amazon Fresh", "Alexa Skills", "Amazon Devices", "Amazon Freshers"]
+  public subHeaderOption: string[] = ["Fresh", "Mobiles", "Gift Cards", "Sell", "Gift Ideas", "MX Player", "Toys & Games", "Audible", "Grocery & Gourmet Foods", "Today's Deal",
     "Sports, Fitness & Outdoors", "AmazonBasics", "Pet Supplies"]
+
+  public onClickOption(option: string) {
+    this.route.navigateByUrl(option.toLowerCase());
+  }
 }
