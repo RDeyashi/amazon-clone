@@ -1,4 +1,4 @@
-header {
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,4 +58,31 @@ input {
     font-weight: 600;
     bottom: 37px;
     left: 25px;
+}
+
+.all-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.all-option:hover, .span-list:hover {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+}
+
+section {
+    background-color: #232F3E;
+    padding: 5px;
+    margin: -8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
